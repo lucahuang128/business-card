@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>羽之旋境坊 - 電子名片 (圖片獨立版)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f4ee; 
+            --primary-coffee: #3d2b1f; /* 經典咖啡色 */
+            --bright-copper: #B87333; /* 亮銅金色 */
+            --text-dark: #3a322d;
+            --text-light: #ffffff;
+            --card-white: #ffffff; 
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Serif TC', "Microsoft JhengHei", serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .web-card-container {
+            width: 100%;
+            max-width: 480px;
+            background: var(--card-white);
+            border-radius: 16px;
+            box-shadow: 0 12px 45px rgba(61, 43, 31, 0.12);
+            overflow: hidden;
+            border: 1px solid #ebdcd0;
+        }
+
+        .card-header {
+            background-color: var(--primary-coffee);
+            position: relative;
+            line-height: 0;
+        }
+
+        .logo-image {
+            width: 100%;
+            display: block;
+        }
+
+        .header-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #b38f6d, var(--bright-copper), #b38f6d);
+        }
+
+        .profile-section {
+            padding: 40px 25px 15px;
+            text-align: center;
+        }
+
+        .user-name {
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--primary-coffee);
+            margin-bottom: 6px;
+            letter-spacing: 2px;
+        }
+
+        .user-title {
+            font-size: 14px;
+            color: var(--bright-copper);
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--bright-copper), transparent);
+            margin-bottom: 25px;
+            opacity: 0.6;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0 10px;
+        }
+
+        .contact-item a {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            border-radius: 8px;
+            background-color: #faf8f5;
+            border: 1px solid #e8dfd7;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .contact-item a:hover {
+            background-color: var(--primary-coffee);
+            color: var(--text-light);
+            border-color: var(--primary-coffee);
+            transform: translateY(-2px);
+        }
+
+        .qr-section {
+            background-color: #faf8f5;
+            margin: 20px 25px 35px;
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px dashed var(--bright-copper);
+        }
+
+        .qr-link {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .qr-box {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px;
+            background: white;
+            padding: 5px;
+            border: 1px solid #ebdcd0;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .qr-tag {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--primary-coffee);
+            margin-bottom: 4px;
+        }
+
+        .qr-sub {
+            font-size: 12px;
+            color: #8c7662;
+        }
+
+        .card-footer {
+            text-align: center;
+            padding: 16px;
+            font-size: 11px;
+            color: #a09284;
+            background-color: #f2ede6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="web-card-container">
+        
+        <!-- 讀取獨立出來的 logo.png -->
+        <div class="card-header">
+            <img class="logo-image" src="logo.png" alt="羽之旋境坊 Logo">
+        </div>
+        <div class="header-bar"></div>
+
+        <div class="profile-section">
+            <h2 class="user-name">周旋羽</h2>
+            <p class="user-title">創辦人 / 專案經理</p>
+            <div class="divider"></div>
+            
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <a href="tel:0912345678">
+                        <span>📞 行動電話：0968-773-697</span>
+                    </a>
+                </li>
+                <li class="contact-item">
+                    <a href="mailto:c.lin@yzxf.com.tw">
+                        <span>✉️ 電子郵件：c.lin@yzxf.com.tw</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 讀取獨立出來的 qr.png -->
+        <div class="qr-section">
+            <a href="https://line.me/ti/p/~yzxf_property" target="_blank" class="qr-link">
+                <div class="qr-box">
+                    <img src="QRcode.jpg" alt="LINE QR Code">
+                </div>
+                <div class="qr-tag">點擊或掃描直接加入 LINE 好友</div>
+            </a>
+            <div class="qr-sub">LINE ID: yzxf_property</div>
+        </div>
+
+        <div class="card-footer">
+            © 2026 羽之旋境坊 版權所有
+        </div>
+    </div>
+
+</body>
+</html>
